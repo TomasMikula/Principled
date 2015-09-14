@@ -116,3 +116,20 @@ Discipline introduces quite a bit of _complexity_ in organizing the law inherita
  - As a result of the above, your best bet to make sure you don't miss any law is to only use _base_ inheritance. That, however, does not avoid duplicates.
 
 Principled does not try to come up with a clever way of structuring your type classes/laws in order to avoid duplicates. Instead, it relies on testing equality of `LawSet`s. Notice in the example above that law sets are defined as case classes, which give a proper implementation of `==`.
+
+Try it out
+----------
+
+1. **Publish locally**
+    ```sh
+    git clone https://github.com/TomasMikula/Principled.git
+    cd Principled
+    sbt publish-local
+    ```
+
+2. **Add to dependencies**
+    ```scala
+    libraryDependencies ++= Seq(
+      "org.principled" %% "principled" % "0.1-SNAPSHOT"
+    )
+    ```
