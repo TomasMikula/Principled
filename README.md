@@ -89,9 +89,9 @@ case class OrderedMonoidLaws[A: Arbitrary](M: OrderedMonoid[A]) extends LawSet("
 }
 ```
 
-Note that `OrderedMonoidLaws` inherit `SemigroupLaws` twice: once via `OrderedSemigroupLaws` and once via `MonoidLaws`. However, Principled makes sure that `SemigroupLaws` will be checked only once.
+Note that `OrderedMonoidLaws` inherits `SemigroupLaws` twice: once via `OrderedSemigroupLaws` and once via `MonoidLaws`. However, Principled makes sure that `SemigroupLaws` will be checked only once.
 
-Testing `OrderMonoidLaws` of a particular instance of `OrderedMonoid`:
+Testing `OrderedMonoidLaws` of a particular instance of `OrderedMonoid`:
 
 ```scala
 object LawTests extends org.scalacheck.Properties("Laws") {
