@@ -14,7 +14,7 @@ scalacOptions ++= Seq(
   "-unchecked",
   "-deprecation",
   "-feature",
-  "-Xfatal-warnings",
+//  "-Xfatal-warnings", // comment out until https://github.com/HairyFotr/linter/issues/23 is fixed
   "-Yno-adapted-args",
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",
@@ -92,7 +92,7 @@ def removeWartRemoverFromCompileTarget = {
 def addFoursquareLinterToLintTarget = {
   Seq(
     resolvers += "Linter Repository" at "https://hairyfotr.github.io/linteRepo/releases",
-    addCompilerPlugin("com.foursquare.lint" %% "linter" % "0.1.9"),
+    addCompilerPlugin("org.psywerx.hairyfotr" %% "linter" % "0.1.12"),
     // See https://github.com/HairyFotr/linter#list-of-implemented-checks
     // for a list of checks that foursquare linter implements.
     // By default linter enables all checks.
