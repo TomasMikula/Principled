@@ -2,7 +2,7 @@ name := "principled"
 
 organization := "org.principled"
 
-version := "0.1-SNAPSHOT"
+version := "0.1"
 
 scalaVersion := "2.12.1"
 
