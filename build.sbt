@@ -4,7 +4,7 @@ organization := "org.principled"
 
 version := "0.1-SNAPSHOT"
 
-scalaVersion := "2.11.7"
+scalaVersion := "2.12.1"
 
 
 scalastyleFailOnError := true
@@ -14,14 +14,14 @@ scalacOptions ++= Seq(
   "-unchecked",
   "-deprecation",
   "-feature",
-//  "-Xfatal-warnings", // comment out until https://github.com/HairyFotr/linter/issues/23 is fixed
+  "-Xfatal-warnings",
   "-Yno-adapted-args",
   "-Ywarn-numeric-widen",
   "-Ywarn-value-discard",
   "-Xfuture")
 
 libraryDependencies ++= Seq(
-  "org.scalacheck" %% "scalacheck" % "1.12.4"
+  "org.scalacheck" %% "scalacheck" % "1.13.4"
 )
 
 fork := true
@@ -92,7 +92,7 @@ def removeWartRemoverFromCompileTarget = {
 def addFoursquareLinterToLintTarget = {
   Seq(
     resolvers += "Linter Repository" at "https://hairyfotr.github.io/linteRepo/releases",
-    addCompilerPlugin("org.psywerx.hairyfotr" %% "linter" % "0.1.12"),
+    addCompilerPlugin("org.psywerx.hairyfotr" %% "linter" % "0.1.17"),
     // See https://github.com/HairyFotr/linter#list-of-implemented-checks
     // for a list of checks that foursquare linter implements.
     // By default linter enables all checks.
